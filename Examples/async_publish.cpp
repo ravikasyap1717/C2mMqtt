@@ -22,10 +22,8 @@
 #include <cstring>
 #include "mqtt/async_client.h"
 
-//const std::string DFLT_ADDRESS("tcp://localhost:1883");
+const std::string DFLT_ADDRESS("tcp://localhost:1883");
 //const std::string DFLT_CLIENTID("AsyncPublisher");
-
-const std::string DFLT_ADDRESS("199.108.99.17:5001");
 const std::string DFLT_CLIENTID("AsyncPublisher");
 
 const std::string TOPIC("hello");

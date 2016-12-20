@@ -38,6 +38,7 @@ Do same in PAHO C++
 Run C2M Example :
 
 	cd Example
+	change IP and PORT like for local localhost:1883
 	make
 
 Run Command :

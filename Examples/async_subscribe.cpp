@@ -23,8 +23,7 @@
 #include <chrono>
 #include "mqtt/async_client.h"
 
-//const std::string ADDRESS("tcp://localhost:1883");
-const std::string ADDRESS("199.108.99.17:5001");
+const std::string ADDRESS("tcp://localhost:1883");
 const std::string CLIENTID("AsyncSubcriber");
 const std::string TOPIC("hello");
 

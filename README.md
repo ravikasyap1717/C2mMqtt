@@ -1,30 +1,41 @@
 # C2mMqtt
 
-cd Desktop
+This is independnt c and c++ Paho Mqtt library to build C2M Mqtt Example.
+In this no need to presinstall any library.Paho c++ library is depend on paho c library or it is a wrapper of paho c Mqtt.
+So, for use for Paho Mqtt CPP library, We need to object file of MQTT C and CPP.
+For that I am compiling the Source code of Paho C C++ Mqtt Socuce file and Keeping all object file in a folder.
+and for compiling C2M soucrce code,we have to link with that C,C++ MQTT Object code.
 
-git clone https://github.com/ravikasyap1717/C2mMqtt.git
+Clone this Url :
+	
+	git clone https://github.com/ravikasyap1717/C2mMqtt.git
 
-cd C2mMqtt
+Move this Specific Folder :
 
-git submodule update --init
+	cd C2mMqtt
+subclone for C and CPP Paho MQTT Source code :
 
-cd paho.mqtt.c
+	git submodule update --init
 
-git checkout develop
+Move in PAHO C and C++ Folder and check Branch develop
 
-make
+	cd paho.mqtt.c
+	git checkout develop
 
-cd ..
+compile source code to generate object code :
+	make
+	cd ..
+Do same in PAHO C++
 
-cd paho.mqtt.cpp
+	cd paho.mqtt.cpp
 
-make DEVELOP=1
+	make DEVELOP=1
 
-cd ..
+	cd ..
 
-cd Example
-
-make
+Run C2M Example :
+	cd Example
+	make
 
 Run Command :
 
@@ -34,10 +45,13 @@ C2M Subscribe:
 C2M Publish :
 	$ ./C2M_Pub
 
-sudo nano /etc/ld.so.conf.d/libc.conf
+for linking the library,set your object file location in this location :
+	sudo nano /etc/ld.so.conf.d/libc.conf
 
-/home/ravi/Desktop/C2mMqtt/paho.mqtt.c/build/output
+like :
+	/home/ravi/Desktop/C2mMqtt/paho.mqtt.c/build/output
 
-/home/ravi/Desktop/C2mMqtt/paho.mqtt.cpp/lib
+	/home/ravi/Desktop/C2mMqtt/paho.mqtt.cpp/lib
 
-sudo ldconfig
+run ldconfig :
+	sudo ldconfig

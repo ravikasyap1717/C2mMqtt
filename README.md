@@ -23,8 +23,10 @@ Move in PAHO C and C++ Folder and check Branch develop
 	git checkout develop
 
 compile source code to generate object code :
+
 	make
 	cd ..
+	
 Do same in PAHO C++
 
 	cd paho.mqtt.cpp
@@ -34,24 +36,30 @@ Do same in PAHO C++
 	cd ..
 
 Run C2M Example :
+
 	cd Example
 	make
 
 Run Command :
 
 C2M Subscribe:
+
 	$ ./C2M_Sub
 
 C2M Publish :
+
 	$ ./C2M_Pub
 
 for linking the library,set your object file location in this location :
-	sudo nano /etc/ld.so.conf.d/libc.conf
 
-like :
+	sudo nano /etc/ld.so.conf.d/libc.conf
+	
+	like :
+	
 	/home/ravi/Desktop/C2mMqtt/paho.mqtt.c/build/output
 
 	/home/ravi/Desktop/C2mMqtt/paho.mqtt.cpp/lib
 
 run ldconfig :
+
 	sudo ldconfig

@@ -67,4 +67,4 @@ run ldconfig :
 	
 or export library:
 	
-	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
+	export LD_LIBRARY_PATH="/path/you/want1:/path/you/want/2"

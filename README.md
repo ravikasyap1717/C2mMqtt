@@ -64,3 +64,7 @@ for linking the library,set your object file location in this location :
 run ldconfig :
 
 	sudo ldconfig
+	
+or export library:
+	
+	export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib
